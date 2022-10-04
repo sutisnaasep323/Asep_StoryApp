@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/addStoryFragment"
+        android:name="id.asep.storyapp.ui.addstoryscreen.AddStoryFragment"
+        android:label="Tambah Story"
+        tools:layout="@layout/add_story_fragment" />
+    <fragment
+        android:id="@+id/detilStoryFragment"
+        android:name="id.asep.storyapp.ui.detailscreen.DetilStoryFragment"
+        android:label="Detail Story"
+        tools:layout="@layout/detil_story_fragment">
+        <argument
+            android:name="stories"
+            app:argType="id.asep.storyapp.domain.model.Stories" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="id.asep.storyapp.ui.storyscreen.HomeFragment"
+        android:label="Beranda"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_listFragment_to_detilStoryFragment"
+            app:destination="@id/detilStoryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_listFragment_to_addStoryFragment"
+            app:destination="@id/addStoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="id.asep.storyapp.ui.loginscreen.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/login_fragment">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="id.asep.storyapp.ui.registerscreen.RegisterFragment"
+        android:label="Daftar"
+        tools:layout="@layout/register_fragment">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/nav_logout"
+        android:name="id.asep.storyapp.ui.logoutdialog.LogoutFragment"
+        android:label="LogoutFragment" >
+        <action
+            android:id="@+id/action_logoutFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+</navigation>
