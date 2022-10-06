@@ -8,13 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.transition.TransitionInflater
 import dagger.hilt.android.AndroidEntryPoint
-import id.asep.storyapp.databinding.DetilStoryFragmentBinding
+import id.asep.storyapp.databinding.DetailStoryFragmentBinding
 
 @AndroidEntryPoint
-class DetilStoryFragment : Fragment() {
+class DetailStoryFragment : Fragment() {
 
-    private val args by navArgs<DetilStoryFragmentArgs>()
-    private var _binding: DetilStoryFragmentBinding? = null
+    private val args by navArgs<DetailStoryFragmentArgs>()
+    private var _binding: DetailStoryFragmentBinding? = null
     private val binding get() = requireNotNull(_binding)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +30,7 @@ class DetilStoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = DetilStoryFragmentBinding.inflate(inflater, container, false)
+        _binding = DetailStoryFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

@@ -3,24 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img_login_logo"
-            android:layout_width="150dp"
+            android:layout_width="0dp"
             android:layout_height="150dp"
+            android:scaleType="centerCrop"
             android:contentDescription="@string/application_logo"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/storyapp"
             app:layout_constraintBottom_toTopOf="@+id/card_login_form"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
-
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_login_form"
@@ -49,8 +48,7 @@
                     android:alpha="0"
                     android:hint="@string/str_email"
                     app:errorEnabled="true"
-
-                    app:startIconDrawable="@drawable/ic_baseline_alternate_email_24"
+                    app:startIconDrawable="@drawable/ic_person"
                     tools:alpha="100">
 
                     <id.asep.storyapp.customview.EmailEditText
@@ -71,9 +69,8 @@
                     android:alpha="0"
                     android:hint="@string/str_password"
                     app:endIconMode="password_toggle"
-                    app:startIconDrawable="@drawable/ic_baseline_lock_open_24"
+                    app:startIconDrawable="@drawable/ic_lock_open"
                     tools:alpha="100">
-
                     <id.asep.storyapp.customview.PasswordEditText
                         android:id="@+id/et_password"
                         android:layout_width="match_parent"
@@ -92,16 +89,27 @@
                     android:alpha="0"
                     android:text="@string/str_login" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_register"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:alpha="0"
-                    android:text="@string/btn_txt_daftar" />
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_marginTop="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/have_account"
+                        android:textSize="16sp"/>
 
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_register"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:alpha="0"
+                        android:text="@string/btn_txt_daftar" />
+                </LinearLayout>
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
 

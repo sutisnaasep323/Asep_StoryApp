@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,15 +22,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
                 <include layout="@layout/placeholder_loading" />
-
                 <include layout="@layout/placeholder_loading" />
-
                 <include layout="@layout/placeholder_loading" />
-
                 <include layout="@layout/placeholder_loading" />
-
                 <include layout="@layout/placeholder_loading" />
                 <include layout="@layout/placeholder_loading" />
                 <include layout="@layout/placeholder_loading" />
@@ -39,7 +33,6 @@
         </com.facebook.shimmer.ShimmerFrameLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -50,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:src="@drawable/ic_baseline_add_24"
+            android:src="@drawable/ic_add"
             app:elevation="2dp"
             app:tint="@color/white"
             app:useCompatPadding="true"

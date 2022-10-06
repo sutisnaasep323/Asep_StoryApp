@@ -34,7 +34,7 @@ class MyEditText : AppCompatEditText, View.OnTouchListener {
 
     private fun init() {
 
-        clearIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
+        clearIcon = ContextCompat.getDrawable(context, R.drawable.ic_close) as Drawable
         doAfterTextChanged { s ->
             if (s.toString().isNotEmpty()) showClearIcon() else hideClearIcon()
         }
@@ -83,7 +83,7 @@ class MyEditText : AppCompatEditText, View.OnTouchListener {
                     MotionEvent.ACTION_DOWN -> {
                         clearIcon = ContextCompat.getDrawable(
                             context,
-                            R.drawable.ic_baseline_close_24
+                            R.drawable.ic_close
                         ) as Drawable
                         showClearIcon()
                         return true
@@ -91,7 +91,7 @@ class MyEditText : AppCompatEditText, View.OnTouchListener {
                     MotionEvent.ACTION_UP -> {
                         clearIcon = ContextCompat.getDrawable(
                             context,
-                            R.drawable.ic_baseline_close_24
+                            R.drawable.ic_close
                         ) as Drawable
                         when {
                             text != null -> text?.clear()

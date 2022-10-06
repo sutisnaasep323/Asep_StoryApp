@@ -15,7 +15,7 @@
     <string name="logout_confirm">Anda yakin akan keluar aplikasi?</string>
     <string name="logout_confirm_judul">Konfirmasi Keluar</string>
     <string name="menu_logout">Keluar</string>
-    <string name="str_daftar_user">Pendaftaran User</string>
+    <string name="str_daftar_user">Daftar User</string>
     <string name="str_nama">Nama</string>
     <string name="str_daftar">Daftar</string>
     <string name="str_password">Password</string>
@@ -23,5 +23,15 @@
     <string name="add_story">Add Story</string>
     <string name="password_error">Password Tidak Boleh Kurang dari 6 Character</string>
     <string name="image_story">Image Story</string>
+    <string name="title_menu_1">Tambahkan Story</string>
+    <string name="desc_menu_1">Kini kamu bisa menambahkan story lewat StoryApp</string>
+    <string name="title_menu_2">Lihat Story</string>
+    <string name="desc_menu_2">Kamu bisa melihat story dan komentar orang lain</string>
+    <string name="title_menu_3">Bagikan Story</string>
+    <string name="desc_menu_3">Unggah story kamu agar orang lain tahu kegiatanmu</string>
+    <string name="title_menu_4">Mulai Sekarang</string>
+    <string name="desc_menu_4">Unggah story pertamamu disini</string>
+    <string name="start">Masuk Aplikasi</string>
+    <string name="have_account">Belum punya akun?</string>
 
 </resources>

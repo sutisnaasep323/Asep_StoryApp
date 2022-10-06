@@ -11,9 +11,9 @@
         tools:layout="@layout/add_story_fragment" />
     <fragment
         android:id="@+id/detilStoryFragment"
-        android:name="id.asep.storyapp.ui.detailscreen.DetilStoryFragment"
+        android:name="id.asep.storyapp.ui.detailscreen.DetailStoryFragment"
         android:label="Detail Story"
-        tools:layout="@layout/detil_story_fragment">
+        tools:layout="@layout/detail_story_fragment">
         <argument
             android:name="stories"
             app:argType="id.asep.storyapp.domain.model.Stories" />

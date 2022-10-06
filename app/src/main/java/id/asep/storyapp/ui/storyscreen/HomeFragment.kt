@@ -98,7 +98,7 @@ class HomeFragment : Fragment() {
     }
 
     companion object {
-        const val RESULT_ADD_STORIES = "jkdsbfjhsdbfjhsdbjkf"
+        const val RESULT_ADD_STORIES = "result_add_stories"
     }
 
 }

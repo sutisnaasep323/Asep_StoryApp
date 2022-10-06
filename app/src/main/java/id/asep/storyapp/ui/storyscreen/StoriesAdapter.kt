@@ -23,7 +23,6 @@ class StoriesAdapter(private val clickListener: (Stories, ImageView) -> Unit) :
         }
     }
 
-    //create diff callback
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoriesViewHolder {
         return StoriesViewHolder(
             ItemStoriesBinding.inflate(

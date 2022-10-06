@@ -50,7 +50,8 @@ class AddStoryFragment : Fragment(), View.OnClickListener {
                 setImage(uri)
             }
         } else {
-            Snackbar.make(binding.imageView, "gagal mengambil gambar", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.imageView, "gagal mengambil gambar", Snackbar.LENGTH_SHORT)
+                .show()
         }
     }
     private val permLauncher =
@@ -199,7 +200,7 @@ class AddStoryFragment : Fragment(), View.OnClickListener {
                     viewmodel.setMessage("maximal ukuran file 1mb")
                 } else {
                     viewmodel.addStory(
-                        binding.tilDesciption.editText?.text?.toString()
+                        binding.tilDescription.editText?.text?.toString()
                             ?.toRequestBody(MultipartBody.FORM),
                         file
                     )

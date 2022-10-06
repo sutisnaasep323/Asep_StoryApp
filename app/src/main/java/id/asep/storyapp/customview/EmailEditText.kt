@@ -34,7 +34,7 @@ class EmailEditText : AppCompatEditText, View.OnTouchListener {
 
 
     private fun init() {
-        clearIcon = ContextCompat.getDrawable(context, R.drawable.ic_baseline_close_24) as Drawable
+        clearIcon = ContextCompat.getDrawable(context, R.drawable.ic_close) as Drawable
         setSingleLine()
 
         doOnTextChanged { text, _, _, _ ->
@@ -76,7 +76,7 @@ class EmailEditText : AppCompatEditText, View.OnTouchListener {
                     MotionEvent.ACTION_DOWN -> {
                         clearIcon = ContextCompat.getDrawable(
                             context,
-                            R.drawable.ic_baseline_close_24
+                            R.drawable.ic_close
                         ) as Drawable
                         showClearIcon()
                         return true
@@ -84,7 +84,7 @@ class EmailEditText : AppCompatEditText, View.OnTouchListener {
                     MotionEvent.ACTION_UP -> {
                         clearIcon = ContextCompat.getDrawable(
                             context,
-                            R.drawable.ic_baseline_close_24
+                            R.drawable.ic_close
                         ) as Drawable
                         when {
                             text != null -> text?.clear()

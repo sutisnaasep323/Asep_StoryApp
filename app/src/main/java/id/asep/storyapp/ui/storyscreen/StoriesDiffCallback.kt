@@ -12,5 +12,4 @@ class StoriesDiffCallback : DiffUtil.ItemCallback<Stories>() {
         return oldItem == newItem
     }
 
-
 }
